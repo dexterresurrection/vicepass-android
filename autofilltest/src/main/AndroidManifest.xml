@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application android:label="Autofill Test" android:theme="@android:style/Theme.Material.Light">
+        <activity android:name=".LoginActivity" android:exported="true" android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- эталон: простейшая служба автозаполнения — отличить поведение клавиатуры эмулятора от ошибки Cloud Pass -->
+        <service android:name=".RefAutofillService" android:exported="true" android:label="Reference autofill"
+            android:permission="android.permission.BIND_AUTOFILL_SERVICE">
+            <intent-filter><action android:name="android.service.autofill.AutofillService" /></intent-filter>
+            <meta-data android:name="android.autofill" android:resource="@xml/ref_autofill" />
+        </service>
+    </application>
+</manifest>

@@ -1,0 +1,1 @@
+design kit 7541570 android/{view/CvAdsView,CvAppsView,CvThemeButton,CvScreenAndroid,common/CvAdsData,CvAppsData,CvThemes,CvScreen}.kt; значки appicon/cloudpass, appicon/vice/vice-pass — 92e154c
